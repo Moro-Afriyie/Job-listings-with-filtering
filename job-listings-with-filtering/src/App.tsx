@@ -5,7 +5,7 @@ import Filter from "./components/Filter";
 
 function App() {
   return (
-    <main className="App">
+    <main className="container">
       <div className="header">
         <h1>Header</h1>
       </div>
