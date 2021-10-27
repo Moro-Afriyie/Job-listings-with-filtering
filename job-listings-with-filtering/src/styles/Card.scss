@@ -1,7 +1,4 @@
 @import "./variables.scss";
-
-//background-color: $FilterTablets;
-//color: $DesaturatedDarkCyan;
 .card__container {
   background-color: #ffffff;
   border-radius: 0.3rem;
@@ -53,9 +50,12 @@
       }
       .position {
         font-weight: 700;
-        color: $DesaturatedDarkCyan;
+        color: $VeryDarkGrayishCyan;
         text-transform: capitalize;
         font-size: 1rem;
+        &:hover {
+          color: $DesaturatedDarkCyan;
+        }
       }
       .day {
         display: flex;
