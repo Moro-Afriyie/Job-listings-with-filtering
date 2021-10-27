@@ -2,12 +2,13 @@ import React from "react";
 import "./App.scss";
 import Card from "./components/Card";
 import Filter from "./components/Filter";
+import bgImage from "./assets/images/bg-header-desktop.svg";
 
 function App() {
   return (
     <main className="container">
       <div className="header">
-        <h1>Header</h1>
+        <img src={bgImage} alt="image" />
       </div>
       <Filter />
       <div className="body">
