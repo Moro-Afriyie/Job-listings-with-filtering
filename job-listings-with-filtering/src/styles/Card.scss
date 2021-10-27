@@ -59,10 +59,16 @@
       }
       .day {
         display: flex;
-        gap: 1rem;
+        gap: 0.9rem;
         align-items: center;
         color: $DarkGrayishCyan;
         font-size: 12px;
+        p {
+          margin-top: 0.3rem;
+        }
+        i {
+          font-size: 3px;
+        }
         .contract {
           text-transform: capitalize;
         }
