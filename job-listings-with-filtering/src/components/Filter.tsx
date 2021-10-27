@@ -16,13 +16,13 @@ const Filter: React.FunctionComponent<IFilterProps> = (props) => {
           </div>
         </div>
         <div className="filter__names">
-          <p>Frontend</p>
+          <p>CSS</p>
           <div className="close">
             <img src={close} alt="close icon" />
           </div>
         </div>
         <div className="filter__names">
-          <p>Frontend</p>
+          <p>Javascript</p>
           <div className="close">
             <img src={close} alt="close icon" />
           </div>
