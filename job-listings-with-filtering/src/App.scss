@@ -12,6 +12,9 @@ body {
 
 .container {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
   .header {
     height: 6.5rem;
     background-color: $DesaturatedDarkCyan;
@@ -22,5 +25,7 @@ body {
   }
   .body {
     border: 1px solid blue;
+    width: 80%;
+    margin: 0 auto;
   }
 }
