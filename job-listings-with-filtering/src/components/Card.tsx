@@ -17,7 +17,19 @@ const Card: React.FunctionComponent<ICardProps> = (props) => {
       </div>
       <div className="card__right">
         <div className="card__tags">
-          <h1>tags</h1>
+          <p>Frontend</p>
+        </div>
+        <div className="card__tags">
+          <p>Senior</p>
+        </div>
+        <div className="card__tags">
+          <p>HTML</p>
+        </div>
+        <div className="card__tags">
+          <p>CSS</p>
+        </div>
+        <div className="card__tags">
+          <p>Javascript</p>
         </div>
       </div>
     </div>

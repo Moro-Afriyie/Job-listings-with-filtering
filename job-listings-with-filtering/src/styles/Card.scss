@@ -9,5 +9,27 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
+  .card__left {
+    display: flex;
+    gap: 1rem;
+  }
+  .card__right {
+    display: flex;
+    gap: 1rem;
+    .card__tags {
+      background-color: $FilterTablets;
+      border-radius: 0.2rem;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 0.35rem 0.4rem;
+      color: $DesaturatedDarkCyan;
+      text-align: center;
+      cursor: pointer;
+      &:hover {
+        background-color: $DesaturatedDarkCyan;
+        color: #ffffff;
+      }
+    }
+  }
 }
