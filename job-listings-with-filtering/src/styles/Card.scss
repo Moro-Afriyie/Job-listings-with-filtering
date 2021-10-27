@@ -1,2 +1,13 @@
+@import "./variables.scss";
+
 //background-color: $FilterTablets;
 //color: $DesaturatedDarkCyan;
+.card__container {
+  background-color: #ffffff;
+  border-radius: 0.3rem;
+  box-shadow: $boxShadow;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
