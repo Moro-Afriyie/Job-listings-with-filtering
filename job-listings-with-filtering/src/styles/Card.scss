@@ -13,6 +13,61 @@
   .card__left {
     display: flex;
     gap: 1rem;
+    .card__details {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      .tags {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        font-weight: 700;
+        .company {
+          font-size: 12px;
+          color: $DesaturatedDarkCyan;
+        }
+        .new {
+          font-size: 12px;
+          text-transform: uppercase;
+          color: white;
+          background-color: $DesaturatedDarkCyan;
+          padding: 0.3rem 0.4rem 0.15rem 0.4rem;
+          font-size: 10px;
+          border-radius: 0.7rem;
+          text-align: center;
+          display: grid;
+          place-content: center;
+        }
+        .featured {
+          font-size: 12px;
+          text-transform: uppercase;
+          color: white;
+          background-color: $VeryDarkGrayishCyan;
+          padding: 0.3rem 0.4rem 0.15rem 0.4rem;
+          font-size: 10px;
+          border-radius: 0.7rem;
+          text-align: center;
+          display: grid;
+          place-content: center;
+        }
+      }
+      .position {
+        font-weight: 700;
+        color: $DesaturatedDarkCyan;
+        text-transform: capitalize;
+        font-size: 1rem;
+      }
+      .day {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        color: $DarkGrayishCyan;
+        font-size: 12px;
+        .contract {
+          text-transform: capitalize;
+        }
+      }
+    }
   }
   .card__right {
     display: flex;

@@ -1,5 +1,6 @@
 import * as React from "react";
 import "../styles/Card.scss";
+import account from "../assets/images/account.svg";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface ICardProps {}
@@ -9,10 +10,24 @@ const Card: React.FunctionComponent<ICardProps> = (props) => {
     <div className="card__container">
       <div className="card__left">
         <div className="card__avatar">
-          <h1>avatar</h1>
+          <img src={account} alt="avatar" />
         </div>
         <div className="card__details">
-          <h1>details</h1>
+          <div className="tags">
+            <p className="company">Photosnap</p>
+            <p className="new">new!</p>
+            <p className="featured">featured</p>
+          </div>
+          <div className="tilte">
+            <p className="position">Senior Frontend developer</p>
+          </div>
+          <div className="day">
+            <p className="postedAT">1d ago</p>
+            <i className="fas fa-circle"></i>
+            <p className="contract">Full time</p>
+            <i className="fas fa-circle"></i>
+            <p className="location">USA only</p>
+          </div>
         </div>
       </div>
       <div className="card__right">
