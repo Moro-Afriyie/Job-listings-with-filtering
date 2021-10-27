@@ -4,7 +4,19 @@ import * as React from "react";
 interface ICardProps {}
 
 const Card: React.FunctionComponent<ICardProps> = (props) => {
-  return <h1>Card</h1>;
+  return (
+    <div className="card__container">
+      <div className="card__avatar">
+        <h1>avatar</h1>
+      </div>
+      <div className="card__details">
+        <h1>details</h1>
+      </div>
+      <div className="card__tags">
+        <h1>tags</h1>
+      </div>
+    </div>
+  );
 };
 
 export default Card;
