@@ -6,7 +6,9 @@ import Filter from "./components/Filter";
 function App() {
   return (
     <main className="App">
-      <div className="header"></div>
+      <div className="header">
+        <h1>Header</h1>
+      </div>
       <Filter />
       <div className="body">
         <Card />
