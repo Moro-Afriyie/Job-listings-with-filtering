@@ -11,7 +11,7 @@ function App() {
         <img src={bgImage} alt="image" />
       </div>
       <Filter />
-      <div className="body">
+      <div className="cards__container">
         <Card />
       </div>
     </main>
