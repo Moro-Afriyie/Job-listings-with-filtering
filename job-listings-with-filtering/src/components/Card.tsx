@@ -4,6 +4,19 @@ import account from "../assets/images/account.svg";
 import dataInterface from "../models/interfaces";
 
 const Card: React.FunctionComponent<dataInterface> = (props: dataInterface) => {
+  const {
+    company,
+    logo,
+    newP,
+    featured,
+    role,
+    level,
+    postedAt,
+    contract,
+    location,
+    languages,
+    tools,
+  } = props;
   return (
     <div className="card__container">
       <div className="card__left">

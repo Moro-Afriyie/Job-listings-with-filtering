@@ -20,7 +20,7 @@ function App() {
               id={card.id}
               company={card.company}
               logo={card.logo}
-              new={card.new}
+              newP={card.newP}
               featured={card.featured}
               position={card.position}
               role={card.role}

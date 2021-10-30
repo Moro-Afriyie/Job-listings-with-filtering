@@ -2,7 +2,7 @@ export default interface dataInterface {
   id: number;
   company: string;
   logo: string;
-  new: boolean;
+  newP: boolean;
   featured: boolean;
   position: string;
   role: string;
