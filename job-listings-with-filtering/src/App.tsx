@@ -13,6 +13,8 @@ function App() {
       <Filter />
       <div className="cards__container">
         <Card />
+        <Card />
+        <Card />
       </div>
     </main>
   );
