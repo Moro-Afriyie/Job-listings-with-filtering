@@ -3,6 +3,7 @@ import "./App.scss";
 import Card from "./components/Card";
 import Filter from "./components/Filter";
 import bgImage from "./assets/images/bg-header-desktop.svg";
+import { data } from "./models/data";
 
 function App() {
   return (
@@ -12,9 +13,26 @@ function App() {
       </div>
       <Filter />
       <div className="cards__container">
-        <Card />
-        <Card />
-        <Card />
+        {data.map((card) => {
+          return (
+            <Card
+              key={card.id}
+              id={card.id}
+              company={card.company}
+              logo={card.logo}
+              new={card.new}
+              featured={card.featured}
+              position={card.position}
+              role={card.role}
+              level={card.level}
+              postedAt={card.postedAt}
+              contract={card.contract}
+              location={card.location}
+              languages={card.languages}
+              tools={card.tools}
+            />
+          );
+        })}
       </div>
     </main>
   );

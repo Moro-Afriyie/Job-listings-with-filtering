@@ -1,11 +1,9 @@
 import * as React from "react";
 import "../styles/Card.scss";
 import account from "../assets/images/account.svg";
+import dataInterface from "../models/interfaces";
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface ICardProps {}
-
-const Card: React.FunctionComponent<ICardProps> = (props) => {
+const Card: React.FunctionComponent<dataInterface> = (props: dataInterface) => {
   return (
     <div className="card__container">
       <div className="card__left">
