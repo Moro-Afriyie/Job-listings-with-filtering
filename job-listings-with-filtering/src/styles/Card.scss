@@ -8,6 +8,7 @@
   justify-content: space-between;
   padding: 1rem 1.5rem;
   border-left: 4px solid #5ba4a4; // border
+  position: relative;
   cursor: pointer;
   @media screen and (max-width: 800px) {
     flex-direction: column;
@@ -19,6 +20,11 @@
     gap: 1rem;
     @media screen and (max-width: 800px) {
       border-bottom: 1px solid $DarkGrayishCyan;
+      width: 100%;
+    }
+    @media screen and (max-width: 540px) {
+      border-bottom: 1px solid $DarkGrayishCyan;
+      flex-direction: column;
     }
     .card__details {
       display: flex;
