@@ -1,4 +1,4 @@
-export interface dataInterface {
+export default interface dataInterface {
   id: number;
   company: string;
   logo: string;

@@ -8,8 +8,9 @@ import shortly from "../assets/images/shortly.svg";
 import insure from "../assets/images/insure.svg";
 import eyecamCo from "../assets/images/eyecam-co.svg";
 import theAirFilterCompany from "../assets/images/the-air-filter-company.svg";
+import dataInterface from "./interfaces";
 
-export const data = [
+export const data: dataInterface[] = [
   {
     id: 1,
     company: "Photosnap",
