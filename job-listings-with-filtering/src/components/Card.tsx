@@ -9,6 +9,7 @@ const Card: React.FunctionComponent<dataInterface> = (props: dataInterface) => {
     logo,
     newP,
     featured,
+    position,
     role,
     level,
     postedAt,
@@ -18,45 +19,55 @@ const Card: React.FunctionComponent<dataInterface> = (props: dataInterface) => {
     tools,
   } = props;
   return (
-    <div className="card__container">
+    <div
+      className="card__container"
+      style={
+        featured ? { borderLeft: "4px solid #5ba4a4" } : { borderLeft: "none" }
+      }
+    >
       <div className="card__left">
         <div className="card__avatar">
-          <img src={account} alt="avatar" />
+          <img src={logo} alt="avatar" />
         </div>
         <div className="card__details">
           <div className="tags">
-            <p className="company">Photosnap</p>
-            <p className="new">new!</p>
-            <p className="featured">featured</p>
+            <p className="company">{company}</p>
+            {newP && <p className="new">new!</p>}
+            {featured && <p className="featured">featured</p>}
           </div>
           <div className="tilte">
-            <p className="position">Senior Frontend developer</p>
+            <p className="position">{position}</p>
           </div>
           <div className="day">
-            <p className="postedAT">1d ago</p>
+            <p className="postedAT">{postedAt}</p>
             <i className="fas fa-circle"></i>
-            <p className="contract">Full time</p>
+            <p className="contract">{contract}</p>
             <i className="fas fa-circle"></i>
-            <p className="location">USA only</p>
+            <p className="location">{location}</p>
           </div>
         </div>
       </div>
       <div className="card__right">
         <div className="card__tags">
-          <p>Frontend</p>
+          <p>{role}</p>
         </div>
         <div className="card__tags">
-          <p>Senior</p>
+          <p>{level}</p>
         </div>
-        <div className="card__tags">
-          <p>HTML</p>
-        </div>
-        <div className="card__tags">
-          <p>CSS</p>
-        </div>
-        <div className="card__tags">
-          <p>Javascript</p>
-        </div>
+        {languages.map((language, index) => {
+          return (
+            <div className="card__tags" key={index}>
+              <p>{language}</p>
+            </div>
+          );
+        })}
+        {tools.map((tools, index) => {
+          return (
+            <div className="card__tags" key={index}>
+              <p>{tools}</p>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
