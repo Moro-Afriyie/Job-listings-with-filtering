@@ -9,6 +9,11 @@
   padding: 1rem 1.5rem;
   border-left: 4px solid #5ba4a4; // border
   cursor: pointer;
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
   .card__left {
     display: flex;
     gap: 1rem;
@@ -80,6 +85,7 @@
   .card__right {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
     .card__tags {
       background-color: $FilterTablets;
       border-radius: 0.2rem;

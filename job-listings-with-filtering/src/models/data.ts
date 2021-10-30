@@ -1,4 +1,3 @@
-import * as React from "react";
 import account from "../assets/images/account.svg";
 import photosnap from "../assets/images/photosnap.svg";
 import manage from "../assets/images/manage.svg";
