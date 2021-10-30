@@ -10,6 +10,7 @@
   border-left: 4px solid #5ba4a4; // border
   position: relative;
   cursor: pointer;
+  margin-bottom: 1.6rem;
   @media screen and (max-width: 800px) {
     flex-direction: column;
     gap: 1.5rem;
