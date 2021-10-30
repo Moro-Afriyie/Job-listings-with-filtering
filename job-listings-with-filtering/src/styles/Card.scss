@@ -17,6 +17,9 @@
   .card__left {
     display: flex;
     gap: 1rem;
+    @media screen and (max-width: 800px) {
+      border-bottom: 1px solid $DarkGrayishCyan;
+    }
     .card__details {
       display: flex;
       flex-direction: column;
@@ -70,6 +73,9 @@
         align-items: center;
         color: $DarkGrayishCyan;
         font-size: 12px;
+        @media screen and (max-width: 800px) {
+          margin-bottom: 1.3rem;
+        }
         p {
           margin-top: 0.3rem;
         }
