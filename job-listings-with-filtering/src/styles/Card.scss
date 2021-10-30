@@ -25,6 +25,15 @@
     @media screen and (max-width: 540px) {
       border-bottom: 1px solid $DarkGrayishCyan;
       flex-direction: column;
+      .card__avatar {
+        margin-bottom: 0.8rem;
+        img {
+          position: absolute;
+          top: -2rem;
+          width: 4rem;
+          bottom: 1rem;
+        }
+      }
     }
     .card__details {
       display: flex;
