@@ -13,3 +13,8 @@ export default interface dataInterface {
   languages: string[];
   tools: string[];
 }
+
+export interface stateInterface {
+  data: dataInterface[];
+  filterArray: string[];
+}

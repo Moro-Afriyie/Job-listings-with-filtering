@@ -4,7 +4,7 @@ import Card from "./components/Card";
 import Filter from "./components/Filter";
 import bgImage from "./assets/images/bg-header-desktop.svg";
 import { useSelector } from "react-redux";
-import { stateInterface } from "./store/reducer";
+import { stateInterface } from "./models/interfaces";
 
 function App() {
   const data = useSelector((state: stateInterface) => state.data);

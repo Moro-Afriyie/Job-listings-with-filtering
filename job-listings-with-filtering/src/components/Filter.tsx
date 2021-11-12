@@ -2,7 +2,7 @@ import * as React from "react";
 import "../styles/Filter.scss";
 import close from "../assets/images/icon-remove.svg";
 import { useSelector } from "react-redux";
-import { stateInterface } from "../store/reducer";
+import { stateInterface } from "../models/interfaces";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface IFilterProps {}

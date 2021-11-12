@@ -1,11 +1,6 @@
 import { data } from "./../models/data";
-import dataInterface from "../models/interfaces";
+import { stateInterface } from "../models/interfaces";
 import { ADD_TO_FILTER_ARRAY, FILTER_JOB_LISTINGS } from "./actionTypes";
-
-export interface stateInterface {
-  data: dataInterface[];
-  filterArray: string[];
-}
 
 const initialState = {
   data: data,
