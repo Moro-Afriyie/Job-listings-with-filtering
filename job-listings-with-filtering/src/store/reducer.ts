@@ -13,7 +13,10 @@ const initialState = {
 };
 type Action = { type: typeof FILTER_JOB_LISTINGS; payload: string };
 
-export const jobListingsReducer = (state = initialState, action: Action) => {
+export const jobListingsReducer = (
+  state: stateInterface = initialState,
+  action: Action
+) => {
   switch (action.type) {
     case FILTER_JOB_LISTINGS:
       return {
