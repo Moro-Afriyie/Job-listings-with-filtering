@@ -26,7 +26,8 @@ const Card: React.FunctionComponent<dataInterface> = (props: dataInterface) => {
   const dispatch = useDispatch();
 
   const onFilterJobListings = (data: string) => {
-    if (filteredArray.indexOf(data) > 0) return;
+    if (filteredArray.indexOf(data) > -1) return;
+
     dispatch(filterJObListings([...filteredArray, data]));
   };
 

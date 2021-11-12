@@ -11,8 +11,6 @@ function App() {
   const filteredArray = useSelector(
     (state: stateInterface) => state.filteredArray
   );
-  console.log(data);
-  console.log(filteredArray);
 
   return (
     <main className="container">
