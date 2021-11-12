@@ -72,8 +72,6 @@ const Card: React.FunctionComponent<dataInterface> = (props: dataInterface) => {
               key={index}
               onClick={() => {
                 dispatch(filterJObListings([...filterArray, language]));
-
-                // dispatch(filterJObListings(language));
               }}
             >
               <p>{language}</p>
@@ -87,8 +85,6 @@ const Card: React.FunctionComponent<dataInterface> = (props: dataInterface) => {
               key={index}
               onClick={() => {
                 dispatch(filterJObListings([...filterArray, tool]));
-
-                // dispatch(filterJObListings(tool));
               }}
             >
               <p>{tool}</p>

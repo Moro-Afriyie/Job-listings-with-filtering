@@ -1,13 +1,14 @@
 import { data } from "./../models/data";
 import { stateInterface } from "../models/interfaces";
-import { FILTER_JOB_LISTINGS } from "./actionTypes";
+import { CLEAR_FILTER_ARRAY, FILTER_JOB_LISTINGS } from "./actionTypes";
 
 const initialState = {
   data: data,
   filterArray: [],
 };
-type Action = { type: typeof FILTER_JOB_LISTINGS; payload: string[] };
-// | { type: typeof FILTER_ORIGINAL_DATA };
+type Action =
+  | { type: typeof FILTER_JOB_LISTINGS; payload: string[] }
+  | { type: typeof CLEAR_FILTER_ARRAY };
 
 export const jobListingsReducer = (
   state: stateInterface = initialState,
@@ -37,6 +38,13 @@ export const jobListingsReducer = (
         filterArray: [...action.payload],
       };
     }
+
+    case CLEAR_FILTER_ARRAY:
+      return {
+        ...state,
+        data: initialState.data,
+        filterArray: initialState.filterArray,
+      };
 
     default:
       return state;

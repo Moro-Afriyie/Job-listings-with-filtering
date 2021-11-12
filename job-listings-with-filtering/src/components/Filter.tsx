@@ -1,11 +1,13 @@
 import * as React from "react";
 import "../styles/Filter.scss";
 import close from "../assets/images/icon-remove.svg";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { stateInterface } from "../models/interfaces";
+import { clearFilterArray } from "../store/action";
 
 const Filter: React.FunctionComponent = () => {
   const filterArray = useSelector((state: stateInterface) => state.filterArray);
+  const dispatch = useDispatch();
 
   return (
     <div className="filter">
@@ -21,7 +23,9 @@ const Filter: React.FunctionComponent = () => {
           );
         })}
       </div>
-      <p className="clear">Clear</p>
+      <p className="clear" onClick={() => dispatch(clearFilterArray())}>
+        Clear
+      </p>
     </div>
   );
 };
