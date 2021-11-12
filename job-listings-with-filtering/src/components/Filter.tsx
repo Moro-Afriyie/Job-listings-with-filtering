@@ -3,7 +3,7 @@ import "../styles/Filter.scss";
 import close from "../assets/images/icon-remove.svg";
 import { useDispatch, useSelector } from "react-redux";
 import { stateInterface } from "../models/interfaces";
-import { resetState } from "../store/action";
+import { closeItem, resetState } from "../store/action";
 
 const Filter: React.FunctionComponent = () => {
   const filterArray = useSelector((state: stateInterface) => state.filterArray);
@@ -16,7 +16,12 @@ const Filter: React.FunctionComponent = () => {
           return (
             <div key={data} className="filter__names">
               <p>{data}</p>
-              <div className="close">
+              <div
+                className="close"
+                onClick={() =>
+                  dispatch(closeItem({ filterArr: filterArray, data }))
+                }
+              >
                 <img src={close} alt="close icon" />
               </div>
             </div>

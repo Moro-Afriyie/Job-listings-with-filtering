@@ -1,4 +1,4 @@
-import { FILTER_JOB_LISTINGS, RESET_STATE } from "./actionTypes";
+import { CLOSE_ITEM, FILTER_JOB_LISTINGS, RESET_STATE } from "./actionTypes";
 
 export const filterJObListings = (data: string[]) => {
   return {
@@ -10,5 +10,12 @@ export const filterJObListings = (data: string[]) => {
 export const resetState = () => {
   return {
     type: RESET_STATE,
+  };
+};
+
+export const closeItem = (data: { filterArr: string[]; data: string }) => {
+  return {
+    type: CLOSE_ITEM,
+    payload: data,
   };
 };

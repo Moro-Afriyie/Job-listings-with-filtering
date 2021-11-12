@@ -1,2 +1,3 @@
 export const FILTER_JOB_LISTINGS = "FILTER_JOB_LISTINGS";
 export const RESET_STATE = "RESET_STATE";
+export const CLOSE_ITEM = "CLOSE_ITEM";
