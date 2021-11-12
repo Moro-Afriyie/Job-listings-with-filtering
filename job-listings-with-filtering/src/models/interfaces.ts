@@ -16,5 +16,5 @@ export default interface dataInterface {
 
 export interface stateInterface {
   data: dataInterface[];
-  filterArray: string[];
+  filteredArray: string[];
 }

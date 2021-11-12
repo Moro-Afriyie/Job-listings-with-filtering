@@ -8,16 +8,18 @@ import { stateInterface } from "./models/interfaces";
 
 function App() {
   const data = useSelector((state: stateInterface) => state.data);
-  const filterArray = useSelector((state: stateInterface) => state.filterArray);
+  const filteredArray = useSelector(
+    (state: stateInterface) => state.filteredArray
+  );
   console.log(data);
-  console.log(filterArray);
+  console.log(filteredArray);
 
   return (
     <main className="container">
       <div className="header">
         <img src={bgImage} alt="image" />
       </div>
-      {filterArray.length > 0 && <Filter />}
+      {filteredArray.length > 0 && <Filter />}
       <div className="cards__container">
         {data.map((card) => {
           return (

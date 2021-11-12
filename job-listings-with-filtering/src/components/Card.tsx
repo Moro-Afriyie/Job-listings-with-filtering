@@ -5,7 +5,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { filterJObListings } from "../store/action";
 
 const Card: React.FunctionComponent<dataInterface> = (props: dataInterface) => {
-  const filterArray = useSelector((state: stateInterface) => state.filterArray);
+  const filteredArray = useSelector(
+    (state: stateInterface) => state.filteredArray
+  );
 
   const {
     company,
@@ -24,8 +26,8 @@ const Card: React.FunctionComponent<dataInterface> = (props: dataInterface) => {
   const dispatch = useDispatch();
 
   const onFilterJobListings = (data: string) => {
-    if (filterArray.indexOf(data) > 0) return;
-    dispatch(filterJObListings([...filterArray, data]));
+    if (filteredArray.indexOf(data) > 0) return;
+    dispatch(filterJObListings([...filteredArray, data]));
   };
 
   return (

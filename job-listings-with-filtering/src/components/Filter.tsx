@@ -6,20 +6,22 @@ import { stateInterface } from "../models/interfaces";
 import { closeItem, resetState } from "../store/action";
 
 const Filter: React.FunctionComponent = () => {
-  const filterArray = useSelector((state: stateInterface) => state.filterArray);
+  const filteredArray = useSelector(
+    (state: stateInterface) => state.filteredArray
+  );
   const dispatch = useDispatch();
 
   return (
     <div className="filter">
       <div className="filter__container">
-        {filterArray.map((data) => {
+        {filteredArray.map((data) => {
           return (
             <div key={data} className="filter__names">
               <p>{data}</p>
               <div
                 className="close"
                 onClick={() =>
-                  dispatch(closeItem({ filterArr: filterArray, data }))
+                  dispatch(closeItem({ filterArr: filteredArray, data }))
                 }
               >
                 <img src={close} alt="close icon" />

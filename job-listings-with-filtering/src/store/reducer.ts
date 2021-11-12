@@ -4,7 +4,7 @@ import { RESET_STATE, FILTER_JOB_LISTINGS, CLOSE_ITEM } from "./actionTypes";
 
 const initialState = {
   data: data,
-  filterArray: [],
+  filteredArray: [],
 };
 type Action =
   | { type: typeof FILTER_JOB_LISTINGS; payload: string[] }
@@ -36,7 +36,7 @@ export const jobListingsReducer = (
       return {
         ...state,
         data: newData,
-        filterArray: [...action.payload],
+        filteredArray: [...action.payload],
       };
     }
 
@@ -44,7 +44,7 @@ export const jobListingsReducer = (
       return {
         ...state,
         data: initialState.data,
-        filterArray: initialState.filterArray,
+        filteredArray: initialState.filteredArray,
       };
 
     case CLOSE_ITEM: {
@@ -70,7 +70,7 @@ export const jobListingsReducer = (
       return {
         ...state,
         data: newData,
-        filterArray: [...filterArr],
+        filteredArray: [...filterArr],
       };
     }
 
