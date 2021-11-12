@@ -9,7 +9,6 @@ import { stateInterface } from "./store/reducer";
 function App() {
   const data = useSelector((state: stateInterface) => state.data);
   const filterArray = useSelector((state: stateInterface) => state.filterArray);
-  console.log(filterArray);
 
   return (
     <main className="container">
