@@ -9,7 +9,7 @@ export interface stateInterface {
 
 const initialState = {
   data: data,
-  filterArray: ["Frontend"],
+  filterArray: [],
 };
 type Action =
   | { type: typeof FILTER_JOB_LISTINGS; payload: string }

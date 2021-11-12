@@ -1,6 +1,8 @@
 import * as React from "react";
 import "../styles/Card.scss";
 import dataInterface from "../models/interfaces";
+import { useDispatch } from "react-redux";
+import { addToFilterArray } from "../store/action";
 
 const Card: React.FunctionComponent<dataInterface> = (props: dataInterface) => {
   const {
@@ -17,6 +19,8 @@ const Card: React.FunctionComponent<dataInterface> = (props: dataInterface) => {
     languages,
     tools,
   } = props;
+  const dispatch = useDispatch();
+
   return (
     <div
       className="card__container"
@@ -47,22 +51,36 @@ const Card: React.FunctionComponent<dataInterface> = (props: dataInterface) => {
         </div>
       </div>
       <div className="card__right">
-        <div className="card__tags">
+        <div
+          className="card__tags"
+          onClick={() => dispatch(addToFilterArray(role))}
+        >
           <p>{role}</p>
         </div>
-        <div className="card__tags">
+        <div
+          className="card__tags"
+          onClick={() => dispatch(addToFilterArray(level))}
+        >
           <p>{level}</p>
         </div>
         {languages.map((language, index) => {
           return (
-            <div className="card__tags" key={index}>
+            <div
+              className="card__tags"
+              key={index}
+              onClick={() => dispatch(addToFilterArray(language))}
+            >
               <p>{language}</p>
             </div>
           );
         })}
-        {tools.map((tools, index) => {
+        {tools.map((tool, index) => {
           return (
-            <div className="card__tags" key={index}>
+            <div
+              className="card__tags"
+              key={index}
+              onClick={() => dispatch(addToFilterArray(tool))}
+            >
               <p>{tools}</p>
             </div>
           );
