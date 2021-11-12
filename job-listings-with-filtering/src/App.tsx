@@ -8,13 +8,15 @@ import { stateInterface } from "./store/reducer";
 
 function App() {
   const data = useSelector((state: stateInterface) => state.data);
+  const filterArray = useSelector((state: stateInterface) => state.filterArray);
+  console.log(filterArray);
 
   return (
     <main className="container">
       <div className="header">
         <img src={bgImage} alt="image" />
       </div>
-      <Filter />
+      {filterArray.length > 0 && <Filter />}
       <div className="cards__container">
         {data.map((card) => {
           return (

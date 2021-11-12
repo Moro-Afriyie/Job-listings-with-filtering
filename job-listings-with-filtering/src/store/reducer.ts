@@ -1,6 +1,6 @@
 import { data } from "./../models/data";
 import dataInterface from "../models/interfaces";
-import { FILTER_JOB_LISTINGS } from "./actionTypes";
+import { ADD_TO_FILTER_ARRAY, FILTER_JOB_LISTINGS } from "./actionTypes";
 
 export interface stateInterface {
   data: dataInterface[];
@@ -9,9 +9,11 @@ export interface stateInterface {
 
 const initialState = {
   data: data,
-  filterArray: [],
+  filterArray: ["Frontend"],
 };
-type Action = { type: typeof FILTER_JOB_LISTINGS; payload: string };
+type Action =
+  | { type: typeof FILTER_JOB_LISTINGS; payload: string }
+  | { type: typeof ADD_TO_FILTER_ARRAY; payload: string };
 
 export const jobListingsReducer = (
   state: stateInterface = initialState,
@@ -19,6 +21,11 @@ export const jobListingsReducer = (
 ) => {
   switch (action.type) {
     case FILTER_JOB_LISTINGS:
+      return {
+        ...state,
+      };
+
+    case ADD_TO_FILTER_ARRAY:
       return {
         ...state,
         filterArray: [...state.filterArray, action.payload],
