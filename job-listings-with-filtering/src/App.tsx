@@ -3,9 +3,12 @@ import "./App.scss";
 import Card from "./components/Card";
 import Filter from "./components/Filter";
 import bgImage from "./assets/images/bg-header-desktop.svg";
-import { data } from "./models/data";
+import { useSelector } from "react-redux";
+import { stateInterface } from "./store/reducer";
 
 function App() {
+  const data = useSelector((state: stateInterface) => state.data);
+
   return (
     <main className="container">
       <div className="header">

@@ -2,7 +2,7 @@ import { data } from "./../models/data";
 import dataInterface from "../models/interfaces";
 import { FILTER_JOB_LISTINGS } from "./actionTypes";
 
-interface stateInterface {
+export interface stateInterface {
   data: dataInterface[];
   filterArray: string[];
 }
