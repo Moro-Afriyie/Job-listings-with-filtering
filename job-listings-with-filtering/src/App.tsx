@@ -9,6 +9,8 @@ import { stateInterface } from "./models/interfaces";
 function App() {
   const data = useSelector((state: stateInterface) => state.data);
   const filterArray = useSelector((state: stateInterface) => state.filterArray);
+  console.log(data);
+  console.log(filterArray);
 
   return (
     <main className="container">

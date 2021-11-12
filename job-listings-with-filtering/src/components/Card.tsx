@@ -1,10 +1,12 @@
 import * as React from "react";
 import "../styles/Card.scss";
-import dataInterface from "../models/interfaces";
-import { useDispatch } from "react-redux";
-import { addToFilterArray } from "../store/action";
+import dataInterface, { stateInterface } from "../models/interfaces";
+import { useDispatch, useSelector } from "react-redux";
+import { filterJObListings, filterOriginalData } from "../store/action";
 
 const Card: React.FunctionComponent<dataInterface> = (props: dataInterface) => {
+  const filterArray = useSelector((state: stateInterface) => state.filterArray);
+
   const {
     company,
     logo,
@@ -53,13 +55,13 @@ const Card: React.FunctionComponent<dataInterface> = (props: dataInterface) => {
       <div className="card__right">
         <div
           className="card__tags"
-          onClick={() => dispatch(addToFilterArray(role))}
+          onClick={() => dispatch(filterJObListings([...filterArray, role]))}
         >
           <p>{role}</p>
         </div>
         <div
           className="card__tags"
-          onClick={() => dispatch(addToFilterArray(level))}
+          onClick={() => dispatch(filterJObListings([...filterArray, level]))}
         >
           <p>{level}</p>
         </div>
@@ -68,7 +70,11 @@ const Card: React.FunctionComponent<dataInterface> = (props: dataInterface) => {
             <div
               className="card__tags"
               key={index}
-              onClick={() => dispatch(addToFilterArray(language))}
+              onClick={() => {
+                dispatch(filterJObListings([...filterArray, language]));
+
+                // dispatch(filterJObListings(language));
+              }}
             >
               <p>{language}</p>
             </div>
@@ -79,9 +85,13 @@ const Card: React.FunctionComponent<dataInterface> = (props: dataInterface) => {
             <div
               className="card__tags"
               key={index}
-              onClick={() => dispatch(addToFilterArray(tool))}
+              onClick={() => {
+                dispatch(filterJObListings([...filterArray, tool]));
+
+                // dispatch(filterJObListings(tool));
+              }}
             >
-              <p>{tools}</p>
+              <p>{tool}</p>
             </div>
           );
         })}

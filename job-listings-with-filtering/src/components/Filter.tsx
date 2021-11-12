@@ -4,10 +4,7 @@ import close from "../assets/images/icon-remove.svg";
 import { useSelector } from "react-redux";
 import { stateInterface } from "../models/interfaces";
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface IFilterProps {}
-
-const Filter: React.FunctionComponent<IFilterProps> = (props) => {
+const Filter: React.FunctionComponent = () => {
   const filterArray = useSelector((state: stateInterface) => state.filterArray);
 
   return (
