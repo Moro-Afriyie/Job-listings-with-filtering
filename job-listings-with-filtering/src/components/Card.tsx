@@ -2,7 +2,7 @@ import * as React from "react";
 import "../styles/Card.scss";
 import dataInterface, { stateInterface } from "../models/interfaces";
 import { useDispatch, useSelector } from "react-redux";
-import { filterJObListings, filterOriginalData } from "../store/action";
+import { filterJObListings } from "../store/action";
 
 const Card: React.FunctionComponent<dataInterface> = (props: dataInterface) => {
   const filterArray = useSelector((state: stateInterface) => state.filterArray);
