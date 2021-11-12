@@ -1,4 +1,4 @@
-import { FILTER_JOB_LISTINGS, CLEAR_FILTER_ARRAY } from "./actionTypes";
+import { FILTER_JOB_LISTINGS, RESET_STATE } from "./actionTypes";
 
 export const filterJObListings = (data: string[]) => {
   return {
@@ -7,8 +7,8 @@ export const filterJObListings = (data: string[]) => {
   };
 };
 
-export const clearFilterArray = () => {
+export const resetState = () => {
   return {
-    type: CLEAR_FILTER_ARRAY,
+    type: RESET_STATE,
   };
 };

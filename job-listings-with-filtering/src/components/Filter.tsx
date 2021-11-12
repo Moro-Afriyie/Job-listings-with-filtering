@@ -3,7 +3,7 @@ import "../styles/Filter.scss";
 import close from "../assets/images/icon-remove.svg";
 import { useDispatch, useSelector } from "react-redux";
 import { stateInterface } from "../models/interfaces";
-import { clearFilterArray } from "../store/action";
+import { resetState } from "../store/action";
 
 const Filter: React.FunctionComponent = () => {
   const filterArray = useSelector((state: stateInterface) => state.filterArray);
@@ -23,7 +23,7 @@ const Filter: React.FunctionComponent = () => {
           );
         })}
       </div>
-      <p className="clear" onClick={() => dispatch(clearFilterArray())}>
+      <p className="clear" onClick={() => dispatch(resetState())}>
         Clear
       </p>
     </div>

@@ -1,6 +1,6 @@
 import { data } from "./../models/data";
 import { stateInterface } from "../models/interfaces";
-import { CLEAR_FILTER_ARRAY, FILTER_JOB_LISTINGS } from "./actionTypes";
+import { RESET_STATE, FILTER_JOB_LISTINGS } from "./actionTypes";
 
 const initialState = {
   data: data,
@@ -8,7 +8,7 @@ const initialState = {
 };
 type Action =
   | { type: typeof FILTER_JOB_LISTINGS; payload: string[] }
-  | { type: typeof CLEAR_FILTER_ARRAY };
+  | { type: typeof RESET_STATE };
 
 export const jobListingsReducer = (
   state: stateInterface = initialState,
@@ -39,7 +39,7 @@ export const jobListingsReducer = (
       };
     }
 
-    case CLEAR_FILTER_ARRAY:
+    case RESET_STATE:
       return {
         ...state,
         data: initialState.data,
