@@ -23,6 +23,11 @@ const Card: React.FunctionComponent<dataInterface> = (props: dataInterface) => {
   } = props;
   const dispatch = useDispatch();
 
+  const onFilterJobListings = (data: string) => {
+    if (filterArray.indexOf(data) > 0) return;
+    dispatch(filterJObListings([...filterArray, data]));
+  };
+
   return (
     <div
       className="card__container"
@@ -53,16 +58,10 @@ const Card: React.FunctionComponent<dataInterface> = (props: dataInterface) => {
         </div>
       </div>
       <div className="card__right">
-        <div
-          className="card__tags"
-          onClick={() => dispatch(filterJObListings([...filterArray, role]))}
-        >
+        <div className="card__tags" onClick={() => onFilterJobListings(role)}>
           <p>{role}</p>
         </div>
-        <div
-          className="card__tags"
-          onClick={() => dispatch(filterJObListings([...filterArray, level]))}
-        >
+        <div className="card__tags" onClick={() => onFilterJobListings(level)}>
           <p>{level}</p>
         </div>
         {languages.map((language, index) => {
@@ -70,9 +69,7 @@ const Card: React.FunctionComponent<dataInterface> = (props: dataInterface) => {
             <div
               className="card__tags"
               key={index}
-              onClick={() => {
-                dispatch(filterJObListings([...filterArray, language]));
-              }}
+              onClick={() => onFilterJobListings(language)}
             >
               <p>{language}</p>
             </div>
@@ -83,9 +80,7 @@ const Card: React.FunctionComponent<dataInterface> = (props: dataInterface) => {
             <div
               className="card__tags"
               key={index}
-              onClick={() => {
-                dispatch(filterJObListings([...filterArray, tool]));
-              }}
+              onClick={() => onFilterJobListings(tool)}
             >
               <p>{tool}</p>
             </div>
