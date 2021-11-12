@@ -23,5 +23,8 @@ export const jobListingsReducer = (
         ...state,
         filterArray: [...state.filterArray, action.payload],
       };
+
+    default:
+      return state;
   }
 };
