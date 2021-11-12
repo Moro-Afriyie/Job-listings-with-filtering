@@ -1,6 +1,5 @@
 import * as React from "react";
 import "../styles/Card.scss";
-import account from "../assets/images/account.svg";
 import dataInterface from "../models/interfaces";
 
 const Card: React.FunctionComponent<dataInterface> = (props: dataInterface) => {
