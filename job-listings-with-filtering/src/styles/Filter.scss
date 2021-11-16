@@ -11,6 +11,9 @@
   justify-content: space-between;
   color: $DesaturatedDarkCyan;
   margin-top: 2rem;
+  @media screen and (max-width: 540px) {
+    width: 80%;
+  }
 
   .filter__container {
     display: flex;
