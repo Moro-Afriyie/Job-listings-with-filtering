@@ -17,28 +17,30 @@ function App() {
       <div className="header">
         <img src={bgImage} alt="image" />
       </div>
-      {filteredArray.length > 0 && <Filter />}
-      <div className="cards__container">
-        {data.map((card) => {
-          return (
-            <Card
-              key={card.id}
-              id={card.id}
-              company={card.company}
-              logo={card.logo}
-              newP={card.newP}
-              featured={card.featured}
-              position={card.position}
-              role={card.role}
-              level={card.level}
-              postedAt={card.postedAt}
-              contract={card.contract}
-              location={card.location}
-              languages={card.languages}
-              tools={card.tools}
-            />
-          );
-        })}
+      <div className="display-container">
+        {filteredArray.length > 0 && <Filter />}
+        <div className="cards__container">
+          {data.map((card) => {
+            return (
+              <Card
+                key={card.id}
+                id={card.id}
+                company={card.company}
+                logo={card.logo}
+                newP={card.newP}
+                featured={card.featured}
+                position={card.position}
+                role={card.role}
+                level={card.level}
+                postedAt={card.postedAt}
+                contract={card.contract}
+                location={card.location}
+                languages={card.languages}
+                tools={card.tools}
+              />
+            );
+          })}
+        </div>
       </div>
     </main>
   );
