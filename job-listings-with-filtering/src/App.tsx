@@ -17,7 +17,10 @@ function App() {
       <div className="header">
         <img src={bgImage} alt="image" />
       </div>
-      <div className="display-container">
+      <div
+        className="display-container"
+        style={filteredArray.length > 0 ? { top: "3rem" } : { top: "9.5rem" }}
+      >
         {filteredArray.length > 0 && <Filter />}
         <div className="cards__container">
           {data.map((card) => {
