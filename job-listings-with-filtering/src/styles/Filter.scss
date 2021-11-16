@@ -1,12 +1,6 @@
 @import "./variables.scss";
 
 .filter {
-  position: absolute;
-  z-index: 2;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  top: 5rem;
   width: 70%;
   background-color: #ffffff;
   box-shadow: $boxShadow;
@@ -16,6 +10,7 @@
   align-items: center;
   justify-content: space-between;
   color: $DesaturatedDarkCyan;
+  margin-top: 2rem;
 
   .filter__container {
     display: flex;
