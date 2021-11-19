@@ -46,8 +46,19 @@ body {
     }
   }
 }
+@media (min-width: 2000px) {
+  html {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1999px) {
+  html {
+    font-size: 21px;
+  }
+}
 @media screen and (max-width: 400px) {
   html {
-    font-size: 11px;
+    font-size: 15px;
   }
 }
