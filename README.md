@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [ ]()
-- Live Site URL: []()
+- Solution URL: [ https://www.frontendmentor.io/solutions/job-listings-with-filtering-react-redux-and-typescript-VMvBfPtnh](https://www.frontendmentor.io/solutions/job-listings-with-filtering-react-redux-and-typescript-VMvBfPtnh)
+- Live Site URL: [https://job-listings-with-filtering-45f212.netlify.app/](https://job-listings-with-filtering-45f212.netlify.app/)
 
 ## My process
 
